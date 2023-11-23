@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-700">
+    <div class="Navbar">
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button" id="btnMain" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                    Icon when menu is closed.
+        
+                    Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                    Icon when menu is open.
+        
+                    Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="./index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Inicio</a>
+                    <a href="./portafolio.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Portafolio</a>
+                    <a href="./about.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Acerca de</a>
+                    </div>
+                </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">        
+                <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full" src="./img/WhatsApp Image 2023-11-23 at 12.29.02 AM.jpeg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="./index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Inicio</a>
+                    <a href="./portafolio.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Portafolio</a>
+                    <a href="./about.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Acerca de</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="boddyPage flex-col min-h-screen">
+        <!--
+            Todo el codigo del Body
+        -->  
+
+        <div id="about" class="relative overflow-hidden mt-16 bg-gray-900">
+            <div class="max-w-7xl mx-auto bg-gray-900">
+                <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 bg-gray-900">
+                    <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+                        fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                    </svg>
+        
+                    <div class="pt-1"></div>
+        
+                    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="sm:text-center lg:text-left">
+                            <h2 class="my-6 text-2xl tracking-tight font-extrabold text-white sm:text-3xl md:text-4xl">
+                                Acerca de mi
+                            </h2>
+                            <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+                                <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+                                <defs>
+                                <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                                    <stop stop-color="#7775D6" />
+                                    <stop offset="1" stop-color="#E935C1" />
+                                </radialGradient>
+                                </defs>
+                            </svg>
+                            <p class="text-gray-300">
+                                Soy estudiante de Ingeniería en Desarrollo de Software <br> tengo 19 años
+                                , nací el 28 de marzo de 2004. Me considero una persona respetuosa <br> y responsable, 
+                                con mucha imaginación, que cada día busca superarse <br> y aprender mas.
+                                He participado en un curso sobre el lenguaje de programación Python en el año 2020, 
+                                dado por la Secretaria de Innovación de la Presidencia. También el curso sobre inicios de
+                                programación en la plataforma de Udemy, <br> el curso sobre Blockchain  dado por la Universidad 
+                                Católica de El Salvador. Puedes contactarme a través de mis redes sociales y correo, facebook <br>como Rebeca Cruz, 
+                                instagram rcruz11, y gmail rebeca.catolica@gmail.edu.sv.
+                            </p>
+                            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start ">
+                                <a href="https://www.canva.com/design/DAFCAveabcU/zglkVsf7uB7V1nbax80-Pw/view" class="text-sm font-semibold leading-6 text-white border-2 rounded-lg p-1 pr-3.5">Ver CV<span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <img class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full" src="./img/WhatsApp Image 2023-11-23 at 12.38.13 AM.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="Footer text-white text-center ">
+        <footer class="bg-gray-800 mx-auto mt-32 w-full max-w-container px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-slate-900/5 py-10">
+                <p class="mt-5 text-center text-sm leading-6 text-slate-500">© 2023 Rebeca Cruz Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    /***
+     * 
+     * Codigo para que aparezca el menu en la version movil
+     * By: Rebeca Cruz
+     * **/
+
+    const menuButton = document.getElementById('btnMain');
+    const menu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuButton.contains(event.target)) {
+            menu.classList.add('hidden');
+        }
+    });
+</script>
+</html>
